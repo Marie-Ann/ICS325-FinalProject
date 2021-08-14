@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+}
+body {
+  background-image: url(images/groupshot2019.JPG);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+.heading {
+  background-color: #9112ee;
+  color: #fff;
+  padding: 15px 20px;
+  padding-right: 10px;
+  text-align: right;
+  opacity: 0.7;
+}
+nav {
+  opacity: 0.8;
+}
+ul li {
+  padding: 10px 15px;
+  padding-left: 70px;
+  opacity: 0.8;
+}

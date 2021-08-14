@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+}
+.heading{
+    background-color: #9112EE;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 15px 25px;
+}
+
+.heading a{
+    text-decoration: none;
+    text-align: right;
+    color: #F6E0E5;
+    font-size: 20px;
+    padding-left: 50px;
+
+}
+.content{
+    margin: 10px;
+}
+table{
+    width: 70%;
+    
+}
+tr td{
+    padding: 15px 20px;
+    text-align: center;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" width="device-width" , initial-scale="1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" type="text/css" href="pages.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <style>
+        #image-carousel{
+            align-items: center;
+            padding: 50px 30px;
+            padding-left: 250px;
+        }
+        carousel-inner img{
+            height: 100%;
+            width: 100%;
+        }
+        ul li{
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body style="background-color:#4a4949;">
+    <div class="heading">
+        <h1>Image Gallery</h1>
+        <h3><a href="index.html">Home&#9774</a></h3>
+    </div>
+    <!--image carousel-->
+    <div id="image-carousel" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#image-carousel1" data-slide-to="0" class="active"></li>
+            <li data-target="#image-carousel2" data-slide-to="1" class="active"></li>
+            <li data-target="#image-carousel3" data-slide-to="2" class="active"></li>
+            <li data-target="#image-carousel4" data-slide-to="3" class="active"></li>
+        </ul>
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="images/circle.jpg" width="875" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="images/tubing.jpg" width="875" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="images/duo.jpg" width="875" height="500">
+            </div>
+            <div class="carousel-item">
+                <img src="images/duo2.jpg" width="875" height="500">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#image-carousel" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#image-carousel" data-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </a>
+    </div>
+
+</body>
+
+</html>
