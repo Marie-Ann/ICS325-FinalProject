@@ -7,6 +7,8 @@
     $dBPass = "";
     $dBName = "nerdvana";
 
+    mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+    
     $conn = new mysqli($serverName, $dBUserName, $dBPass, $dBName);
 
     //kill the connection if user cannot connect.
