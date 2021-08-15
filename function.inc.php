@@ -65,22 +65,18 @@
     //furction to create a new user.
     function createUser($conn, $username, $pwd, $email){
         $sql = "INSERT INTO member(username, password, email) VALUES (?,?,?);";
-        $stmt = mysqli_stmt_init($conn);
-        if(!mysqli_stmt_prepare($stmt, $sql)){
+        $stmt = $conn->stmt_init();
+        if(!$stmt->prepare($sql)){
             header("location: ../signup.php?error=somethingwentwrong"); //takes user back to sign in if something can't found in DB.
             exit();
         }
 
-        $hashPass = password_hash($pwd, PASSWORD_DEFAULT);
-
-        mysqli_stmt_bind_param($stmt, "sss", $username, $hashPass, $email);
-        mysqli_stmt_execute($stmt);
-        mysqli_stmt_close($stmt);
+        $hashPass = password_hash($pwd, PASSWORD_DEFAULT);        
+        $stmt->bind_param("sss", $username, $hashPass, $email);
+        $stmt->execute();
         //takes user back to sign up page upon completion.
         header("location: ../signup.php?error=none");
         exit();
-
-        
     }
     
     function loginUser($conn, $username, $pwd){
